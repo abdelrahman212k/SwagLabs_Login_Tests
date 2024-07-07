@@ -22,6 +22,7 @@ public class LoginTests extends BaseTest {
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
 
+        // Can through a stale reference exception
         WebElement swagLabsDiv = driver.findElement(By.cssSelector("div[class='app_logo']"));
         Assert.assertTrue(swagLabsDiv.isDisplayed(), "Swag Labs logo is not displayed");
     }

@@ -7,14 +7,14 @@ public class BaseTest {
     protected WebDriver driver;
 
     @BeforeMethod
-    public void openWindow() {
+    public void openBrowser() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.saucedemo.com/");
     }
 
     @AfterMethod
-    public void closeWindow() {
+    public void closeBrowser() {
         if (driver != null) {
             driver.quit();
         }
